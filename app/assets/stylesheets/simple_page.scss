@@ -1,3 +1,21 @@
 // Place all the styles related to the simple_page controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+h1{
+  font-family: Verdana, sans-serif;
+  font-style: normal;
+  font-size: 30px;
+  font-weight: bold;
+  color: #FFBD33;
+}
+body {
+  padding-top: 0px;
+  background-color: #FFFBBF;
+
+}
+nav{
+  background-color:#FFBD33;
+}
+.about{
+  padding: 20px;
+}
