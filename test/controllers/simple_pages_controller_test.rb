@@ -1,8 +1,8 @@
 require 'test_helper'
 
 class SimplePagesControllerTest < ActionDispatch::IntegrationTest
-  test "should get index" do
-    get simple_pages_index_url
+  test "should get landing_page" do
+    get simple_pages_landing_page_url
     assert_response :success
   end
 
