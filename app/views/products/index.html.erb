@@ -6,26 +6,10 @@
 
 <div class="container-fluid">
   <div class="row">
-    <% @products.each do |product| %>
-      <div class="col-sm-4">
-        <%= image_tag(product.image_url, class: "img-fluid") unless product.image_url.nil? %>
-        <a href="#"><h1><td><%= product.name %></td></h1></a>
-        <p><td><%= product.description %></td></p>
-        <p><td><%= product.colour %></td></p>
-        <p><td><%= product.price %></td></p>
-        <td><%= link_to 'Show', product %></td>
-        <td><%= link_to 'Edit', edit_product_path(product) %></td>
-        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </div><!-- /col -->
-    <% end %>
+    <%= render @products %>
   </div>
 </div>
 
 <br>
 
 <%= link_to 'New Product', new_product_path %>
-<% paragraph_number = 1 %>
-<% 5.times do %>
-  <p>This is paragraph number <%= paragraph_number %></p>
-  <% paragraph_number = paragraph_number + 1 %>
-<% end %>

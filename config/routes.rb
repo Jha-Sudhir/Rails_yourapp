@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'simple_pages/products'
   get 'orders/show'
   get 'orders/index'
   resources :orders, only: [:index, :show, :create, :destroy]
