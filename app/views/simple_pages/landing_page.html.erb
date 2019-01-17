@@ -12,32 +12,18 @@
   </ol>
   <div class="carousel-inner">
     <% @products.each do |product| %>
-    <div class="carousel-item<%= " active" if product == @products.first %>">
-      <div class="carousel-item">
-      <%= image_tag(product.image_url) %>
+      <div class="carousel-item<%= " active" if product == @products.first %>">
+      <!-- <div class="carousel-item"> -->
+      <%= image_tag(product.image_url)unless product.image_url.nil? %>
         <div class="carousel-caption d-none d-md-block">
         <%= product.name %>
         </div>
-      </div>
+      <!-- </div> -->
     </div>
-    <!-- <div class="carousel-item"> -->
-      <div class="carousel-item">
-        <%= image_tag(product.image_url) %>
-        <div class="carousel-caption d-none d-md-block">
-          <%= product.name %>
-        </div>
-      </div>
-    <!-- </div> -->
-    <!-- <div class="carousel-item"> -->
-      <div class="carousel-item">
-        <%= image_tag(product.image_url) %>
-        <div class="carousel-caption d-none d-md-block">
-          <%= product.name %>
-        </div>
-      </div>
-    <!-- </div> -->
+  <%end%>
+
   </div>
-<% end %>
+
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>

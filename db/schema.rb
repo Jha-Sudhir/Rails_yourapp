@@ -18,11 +18,11 @@ ActiveRecord::Schema.define(version: 2019_01_07_115547) do
   end
 
   create_table "orders", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "product_id"
-    t.float "total"
-    t.index ["product_id"], name: "index_orders_on_product_id"
-    t.index ["user_id"], name: "index_orders_on_user_id"
+    t.integer "user_id:"
+    t.integer "product_id:"
+    t.float "total:"
+    t.index ["product_id:"], name: "index_orders_on_product_id:"
+    t.index ["user_id:"], name: "index_orders_on_user_id:"
   end
 
   create_table "products", force: :cascade do |t|

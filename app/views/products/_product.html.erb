@@ -1,4 +1,4 @@
-<%= @products.each do |product| %>
+<% @products.each do |product| %>
   <div class="col-sm-4">
     <%= image_tag(product.image_url, class: "img-fluid") unless product.image_url.nil? %>
     <a href="#"><h1><td><%= product.name %></td></h1></a>
