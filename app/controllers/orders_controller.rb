@@ -1,4 +1,4 @@
-class OdersController < ApplicationController
+class OrdersController < ApplicationController
   def index
     @orders = Order.includes(:product).all
 

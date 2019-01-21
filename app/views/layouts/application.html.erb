@@ -16,13 +16,18 @@
   <body>
 
   <nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
-    <%= link_to "Home", root_path %>
-    <%= link_to "About", simple_pages_about_path %>
-    <%= link_to "Products",products_path %>
-    <%= link_to "Contact", simple_pages_contact_path %>
+    <div class="container">
+      <%= link_to "Home", root_path %>
+      <%= link_to "About", simple_pages_about_path %>
+      <%= link_to "Products",products_path %>
+      <%= link_to "Contact", simple_pages_contact_path %>
+      <%= form_with(url: products_path, method: 'get', local: true) do |form| %>
+      <%= form.label :q, 'Search for:' %>
+      <%= form.text_field :q, id: 'q', value: params[:q] %>
+      <%= form.submit 'Search' %>
+      <% end %>
     </div>
-</nav>
+  </nav>
     <%= yield %>
 
     <footer>
